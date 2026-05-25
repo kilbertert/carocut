@@ -176,7 +176,7 @@ def install_browser():
     browser_script = TEMPLATE_CACHE / "scripts" / "browser_install.sh"
     if browser_script.exists():
         print("  下载 chrome-headless-shell (可能需要 3-6 min)...")
-        run_command(["sh", str(browser_script)], cwd=TEMPLATE_CACHE)
+        run_command(["bash", str(browser_script)], cwd=TEMPLATE_CACHE)
         print("  ✓ 浏览器已安装")
     else:
         print("  警告: browser_install.sh 不存在，跳过浏览器安装")

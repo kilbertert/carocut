@@ -131,4 +131,4 @@ fi
 echo ""
 echo "安装完成！"
 echo "  可执行文件: ${EXEC_PATH}"
-echo "  版本文件:   ${CACHE_DIR}/VERSION → ${VERSION}"
+echo "  版本文件:   ${CACHE_DIR}/VERSION -> ${VERSION}"

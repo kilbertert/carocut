@@ -19,7 +19,7 @@ fi
 # 检查是否在虚拟环境中
 if [ -z "$VIRTUAL_ENV" ]; then
     echo "⚠️  未激活虚拟环境，正在激活..."
-    source .venv/bin/activate
+    . .venv/bin/activate
 fi
 
 # 检查 opencode.json
@@ -34,10 +34,10 @@ fi
 if ! command -v pnpm &> /dev/null; then
     # 尝试激活 nvm
     if [ -s "$HOME/.nvm/nvm.sh" ]; then
-        source "$HOME/.nvm/nvm.sh" --no-use
+        . "$HOME/.nvm/nvm.sh"
         nvm use default 2>/dev/null
     elif [ -s "/opt/homebrew/opt/nvm/nvm.sh" ]; then
-        source "/opt/homebrew/opt/nvm/nvm.sh" --no-use
+        . "/opt/homebrew/opt/nvm/nvm.sh"
         nvm use default 2>/dev/null
     fi
 fi
